@@ -23,7 +23,7 @@ app.use('/clientes', Clientes);
 app.use('/localidades', Localidades);
 
 mongoose.connect(
-  `mongodb://${process.env.DB_HOST}/${process.env.DB}`,
+  `${process.env.DB_HOST}/${process.env.DB}`,
   {useNewUrlParser: true},
   (err, res) =>{
     err && console.log('Error conectando a la db');
